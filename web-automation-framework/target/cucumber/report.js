@@ -1,167 +1,348 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("MyFlight_Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Flujos_WEBDELIVERY.feature");
 formatter.feature({
   "line": 1,
-  "name": "Mercury Tours",
+  "name": "FlujoWEB_DELIVERY",
   "description": "",
-  "id": "mercury-tours",
+  "id": "flujoweb-delivery",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "line": 4,
-  "name": "Login Mercury Exitoso",
+  "line": 35,
+  "name": "SELECCIONAR AGENDAMIENTO WEB DELIVERY",
   "description": "",
-  "id": "mercury-tours;login-mercury-exitoso",
+  "id": "flujoweb-delivery;seleccionar-agendamiento-web-delivery",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 3,
-      "name": "@MyFlight_Login_Existoso"
+      "line": 34,
+      "name": "@Test3"
     }
   ]
 });
 formatter.step({
-  "line": 6,
-  "name": "Ingreso a la url \"\u003ccaso_prueba\u003e\"",
+  "line": 37,
+  "name": "Ingreso a la url de WEB DELIVERY \"\u003ccaso_prueba\u003e\"",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 7,
-  "name": "Ingreso el usuario \"\u003ccaso_prueba\u003e\"",
+  "line": 38,
+  "name": "Ingreso el usuario de WEB DELIVERY\"\u003ccaso_prueba\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 8,
-  "name": "La contraseña \"\u003ccaso_prueba\u003e\"",
+  "line": 39,
+  "name": "La contraseña de WEB DELIVERY\"\u003ccaso_prueba\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 9,
-  "name": "se da clic en el boton Sing-IN ingresando correctamente",
+  "line": 40,
+  "name": "se da clic en el boton login de WEB DELIVERY ingresando correctamente",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 41,
+  "name": "Se da click en el boton IR A en WEB DELIVERY \"\u003ccaso_prueba\u003e\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 42,
+  "name": "Seleccionar auditoria de pedidos en WEB DELIVERY \"\u003ccaso_prueba\u003e\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 43,
+  "name": "Ingresar y buscar el numero de orden en WEB DELIVERY \"\u003ccaso_prueba\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 44,
+  "name": "Se encontrara la orden \"\u003ccaso_prueba\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 45,
+  "name": "Se da click en el boton agendar pedido \"\u003ccaso_prueba\u003e\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 46,
+  "name": "Seleccionar fecha del pedido \"\u003ccaso_prueba\u003e\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 47,
+  "name": "se da click en el boton aceptar \"\u003ccaso_prueba\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 48,
+  "name": "se verifica que el estado del pedido sea agendado \"\u003ccaso_prueba\u003e\"",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 13,
+  "line": 51,
   "name": "",
   "description": "",
-  "id": "mercury-tours;login-mercury-exitoso;",
+  "id": "flujoweb-delivery;seleccionar-agendamiento-web-delivery;",
   "rows": [
     {
       "cells": [
         "caso_prueba"
       ],
-      "line": 14,
-      "id": "mercury-tours;login-mercury-exitoso;;1"
+      "line": 52,
+      "id": "flujoweb-delivery;seleccionar-agendamiento-web-delivery;;1"
     },
     {
       "cells": [
         "1"
       ],
-      "line": 15,
-      "id": "mercury-tours;login-mercury-exitoso;;2"
+      "line": 53,
+      "id": "flujoweb-delivery;seleccionar-agendamiento-web-delivery;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 255260900,
+  "duration": 439345600,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11302870700,
+  "duration": 12436768400,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 15,
-  "name": "Login Mercury Exitoso",
+  "line": 53,
+  "name": "SELECCIONAR AGENDAMIENTO WEB DELIVERY",
   "description": "",
-  "id": "mercury-tours;login-mercury-exitoso;;2",
+  "id": "flujoweb-delivery;seleccionar-agendamiento-web-delivery;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 3,
-      "name": "@MyFlight_Login_Existoso"
+      "line": 34,
+      "name": "@Test3"
     }
   ]
 });
 formatter.step({
-  "line": 6,
-  "name": "Ingreso a la url \"1\"",
+  "line": 37,
+  "name": "Ingreso a la url de WEB DELIVERY \"1\"",
   "matchedColumns": [
     0
   ],
   "keyword": "Given "
 });
 formatter.step({
-  "line": 7,
-  "name": "Ingreso el usuario \"1\"",
+  "line": 38,
+  "name": "Ingreso el usuario de WEB DELIVERY\"1\"",
   "matchedColumns": [
     0
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 8,
-  "name": "La contraseña \"1\"",
+  "line": 39,
+  "name": "La contraseña de WEB DELIVERY\"1\"",
   "matchedColumns": [
     0
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 9,
-  "name": "se da clic en el boton Sing-IN ingresando correctamente",
+  "line": 40,
+  "name": "se da clic en el boton login de WEB DELIVERY ingresando correctamente",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 41,
+  "name": "Se da click en el boton IR A en WEB DELIVERY \"1\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 42,
+  "name": "Seleccionar auditoria de pedidos en WEB DELIVERY \"1\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 43,
+  "name": "Ingresar y buscar el numero de orden en WEB DELIVERY \"1\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 44,
+  "name": "Se encontrara la orden \"1\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 45,
+  "name": "Se da click en el boton agendar pedido \"1\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 46,
+  "name": "Seleccionar fecha del pedido \"1\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 47,
+  "name": "se da click en el boton aceptar \"1\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 48,
+  "name": "se verifica que el estado del pedido sea agendado \"1\"",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
       "val": "1",
-      "offset": 18
+      "offset": 34
     }
   ],
-  "location": "MyFlight_Login.ingresoALaUrl(String)"
+  "location": "steep_LoginW_D.ingresoALaUrlDeWEBDELIVERY(String)"
 });
 formatter.result({
-  "duration": 9502258300,
+  "duration": 3078401300,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "1",
-      "offset": 20
+      "offset": 35
     }
   ],
-  "location": "MyFlight_Login.ingresoElUsuario(String)"
+  "location": "steep_LoginW_D.ingresoElUsuarioDeWEBDELIVERY(String)"
 });
 formatter.result({
-  "duration": 1272168900,
+  "duration": 1417770600,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "1",
-      "offset": 15
+      "offset": 30
     }
   ],
-  "location": "MyFlight_Login.laContraseña(String)"
+  "location": "steep_LoginW_D.laContraseñaDeWEBDELIVERY(String)"
 });
 formatter.result({
-  "duration": 1163566400,
+  "duration": 1311623500,
   "status": "passed"
 });
 formatter.match({
-  "location": "MyFlight_Login.seDaClicEnElBotonSingINIngresandoCorrectamente()"
+  "location": "steep_LoginW_D.seDaClicEnElBotonLoginDeWEBDELIVERYIngresandoCorrectamente()"
 });
 formatter.result({
-  "duration": 10392082700,
+  "duration": 3606671300,
   "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 46
+    }
+  ],
+  "location": "steep_BuscarOrdenW_D.seDaClickEnElBotonIRAEnWEBDELIVERY(String)"
+});
+formatter.result({
+  "duration": 922390100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 50
+    }
+  ],
+  "location": "steep_BuscarOrdenW_D.seleccionarAuditoriaDePedidosEnWEBDELIVERY(String)"
+});
+formatter.result({
+  "duration": 2815694500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 54
+    }
+  ],
+  "location": "steep_BuscarOrdenW_D.ingresarElNumeroDeOrdenEnWEBDELIVERY(String)"
+});
+formatter.result({
+  "duration": 1676650100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 24
+    }
+  ],
+  "location": "steep_BuscarOrdenW_D.seEncontraraLaOrden(String)"
+});
+formatter.result({
+  "duration": 8867321900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 40
+    }
+  ],
+  "location": "steep_AgendarPedidoW_D.seDaClickEnElBotonAgendarPedido(String)"
+});
+formatter.result({
+  "duration": 3041359900,
+  "status": "passed"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 formatter.after({
-  "duration": 1349275800,
+  "duration": 1730354100,
   "status": "passed"
 });
 });

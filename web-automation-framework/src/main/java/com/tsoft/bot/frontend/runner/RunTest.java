@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 
 @CucumberOptions(
 		features={"src//main//resources//features"},
-		glue={"com.tsoft.bot.frontend.steps.myflight","com.tsoft.bot.frontend.helpers"},
+		glue={"com.tsoft.bot.frontend.steps.WEB_DELIVERY","com.tsoft.bot.frontend.helpers"},
 		plugin = {"pretty", "html:target/cucumber"},
-		tags = {"@MyFlight_Login_Existoso"},
+		tags = {"@Test3"},
 		monochrome = true
 	)
 

@@ -13,3 +13,4 @@ Feature: FlujoMCSS
     Examples:
       | caso_prueba |
       |           1 |
+

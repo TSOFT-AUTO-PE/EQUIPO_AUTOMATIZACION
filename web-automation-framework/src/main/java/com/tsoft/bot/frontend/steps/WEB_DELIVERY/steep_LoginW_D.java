@@ -1,4 +1,4 @@
-package com.tsoft.bot.frontend.steps.myflight;
+package com.tsoft.bot.frontend.steps.WEB_DELIVERY;
 
 import com.tsoft.bot.frontend.BaseClass;
 import com.tsoft.bot.frontend.helpers.Hook;
@@ -14,16 +14,11 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-
+import static com.tsoft.bot.frontend.pageobject.WEB_DELIVERY.PageObject_LoginW_D.*;
 import java.util.HashMap;
 import java.util.List;
-
-import static com.tsoft.bot.frontend.pageobject.myflight.MyFlightPageObject.*;
-
-
-public class MyFlight_Login extends BaseClass {
-
-    private static final String EXCEL_WEB = "excel/MyFlight.xlsx";
+public class steep_LoginW_D {
+    private static final String EXCEL_WEB = "excel/Login_WEB_DELIVERY.xlsx";
     private static final String LOGIN_WEB = "Login";
     private static final String COLUMNA_URL = "URL";
     private static final String COLUMNA_USUARIO = "Usuario";
@@ -31,25 +26,26 @@ public class MyFlight_Login extends BaseClass {
     private static GenerateWord generateWord = new GenerateWord();
     private WebDriver driver;
 
-    public MyFlight_Login() {
+    public steep_LoginW_D() {
         this.driver = Hook.getDriver();
     }
     private List<HashMap<String, String>> getData() throws Throwable {
         return ExcelReader.data(EXCEL_WEB, LOGIN_WEB);
     }
 
-    @Given("^Ingreso a la url \"([^\"]*)\"$")
-    public void ingresoALaUrl(String casoDePrueba) throws Throwable {
+    @Given("^Ingreso a la url de WEB DELIVERY \"([^\"]*)\"$")
+    public void ingresoALaUrlDeWEBDELIVERY(String casoDePrueba) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
         try {
-            int myflight = Integer.parseInt(casoDePrueba) - 1;
-            String url = getData().get(myflight).get(COLUMNA_URL);
+            int LoginWD = Integer.parseInt(casoDePrueba) - 1;
+            String url = getData().get(LoginWD).get(COLUMNA_URL);
             driver.get(url);
-            sleep(3500);
-            stepPass(driver, "Se inició correctamente la página MyFlight");
-            generateWord.sendText("Se inició correctamente la página MyFlight");
+            ExtentReportUtil.INSTANCE.stepPass(driver, "Se cargó correctamente la página");
+            generateWord.sendText("Se cargó correctamente la página");
             generateWord.addImageToWord(driver);
-        }catch (Exception e) {
+
+        }catch (Exception e){
             ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 1, 19, "FAIL");
             ExtentReportUtil.INSTANCE.stepFail(driver, "Fallo el caso de prueba : " + e.getMessage());
             generateWord.sendText("Tiempo de espera ha excedido");
@@ -57,17 +53,39 @@ public class MyFlight_Login extends BaseClass {
         }
     }
 
-    @When("^Ingreso el usuario \"([^\"]*)\"$")
-    public void ingresoElUsuario(String casoDePrueba) throws Throwable {
+    @When("^Ingreso el usuario de WEB DELIVERY\"([^\"]*)\"$")
+    public void ingresoElUsuarioDeWEBDELIVERY(String casoDePrueba) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
         try {
-            int myflight = Integer.parseInt(casoDePrueba) - 1;
-            driver.findElement(By.name(TXT_USUARIO)).clear();
-            String user = getData().get(myflight).get(COLUMNA_USUARIO);
-            sendKeyValue(driver,"name",TXT_USUARIO,user);
-            //Assert.assertEquals(user, getText(driver,"name", TXT_USUARIO));
-            stepPass(driver, "Se ingresó el usuario : " + user);
-            generateWord.sendText("Se ingresó el Usuario ");
+            int user = Integer.parseInt(casoDePrueba) - 1;
+            driver.findElement(TXT_USER).clear();
+            String usuario = getData().get(user).get(COLUMNA_USUARIO);
+            driver.findElement(TXT_USER).sendKeys(usuario);
+            ExtentReportUtil.INSTANCE.stepPass(driver, "Ingresamos el usuario");
+            generateWord.sendText("Ingresamos el usuario");
+            generateWord.addImageToWord(driver);
+
+        }catch (Exception e){
+            ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 1, 19, "FAIL");
+            ExtentReportUtil.INSTANCE.stepFail(driver, "Fallo el caso de prueba : " + e.getMessage());
+            generateWord.sendText("Tiempo de espera ha excedido");
+            generateWord.addImageToWord(driver);
+
+        }
+    }
+
+    @And("^La contraseña de WEB DELIVERY\"([^\"]*)\"$")
+    public void laContraseñaDeWEBDELIVERY(String casoDePrueba) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+        try {
+            int PASS = Integer.parseInt(casoDePrueba) - 1;
+            driver.findElement(TXT_PASSWORD).clear();
+            String contra = getData().get(PASS).get(COLUMNA_CONTRASENIA);
+            driver.findElement(TXT_PASSWORD).sendKeys(contra);
+            ExtentReportUtil.INSTANCE.stepPass(driver, "Ingresamos la contraseña");
+            generateWord.sendText("Ingresamos la contraseña");
             generateWord.addImageToWord(driver);
         }catch (Exception e){
             ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 1, 19, "FAIL");
@@ -77,40 +95,18 @@ public class MyFlight_Login extends BaseClass {
         }
     }
 
-    @And("^La contraseña \"([^\"]*)\"$")
-    public void laContraseña(String casoDePrueba) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+    @Then("^se da clic en el boton login de WEB DELIVERY ingresando correctamente$")
+    public void seDaClicEnElBotonLoginDeWEBDELIVERYIngresandoCorrectamente() throws Exception {
         try {
-            int myflight = Integer.parseInt(casoDePrueba) - 1;
-            driver.findElement(By.name(TXT_CONTRASENIA)).clear();
-            String pass = getData().get(myflight).get(COLUMNA_CONTRASENIA);
-            driver.findElement(By.name(TXT_CONTRASENIA)).sendKeys(pass);
-            ExtentReportUtil.INSTANCE.stepPass(driver, "Se ingresó la contraseña : " + pass);
-            generateWord.sendText("Se ingresó la Contraseña ");
+            driver.findElement(BTN_LOGIN).click();
+            ExtentReportUtil.INSTANCE.stepPass(driver, "Se ingresa correctamente");
+            generateWord.sendText("Se ingresa correctamente");
             generateWord.addImageToWord(driver);
         }catch (Exception e){
             ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 1, 19, "FAIL");
             ExtentReportUtil.INSTANCE.stepFail(driver, "Fallo el caso de prueba : " + e.getMessage());
             generateWord.sendText("Tiempo de espera ha excedido");
             generateWord.addImageToWord(driver);
-        }
-    }
-
-    @Then("^se da clic en el boton Sing-IN ingresando correctamente$")
-    public void seDaClicEnElBotonSingINIngresandoCorrectamente() throws Exception {
-        try {
-            //driver.findElement(By.name(BTN_SIGNIN)).click();
-            click(driver, "name", BTN_SIGNIN);
-            ExtentReportUtil.INSTANCE.stepPass(driver, "Se dió clic en el botón SignIN");
-            generateWord.sendText("Se dió clic en el botón SignIN ");
-            generateWord.addImageToWord(driver);
-        }catch (Exception e) {
-            ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 1, 19, "FAIL");
-            ExtentReportUtil.INSTANCE.stepFail(driver, "Fallo el caso de prueba : " + e.getMessage());
-            generateWord.sendText("Tiempo de espera ha excedido");
-            generateWord.addImageToWord(driver);
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
         }
     }
 

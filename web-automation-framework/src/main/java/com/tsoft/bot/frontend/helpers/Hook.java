@@ -28,7 +28,7 @@ public class Hook extends Listener {
 	private static final String CHROME_DRIVER 	= "/src/main/resources/driver/chrome/79.0/chromedriver.exe";
 	private static final String IE_KEY 			= "webdriver.ie.driver";
 	private static final String IE_DRIVER 		= "/src/main/resources/driver/ie/3.5/IEDriverServer.exe";
-	private static final long DELAY = 10;
+	private static final long DELAY = 80;
 	private static WebDriver driver;
 
 	static GenerateWord generateWord = new GenerateWord();

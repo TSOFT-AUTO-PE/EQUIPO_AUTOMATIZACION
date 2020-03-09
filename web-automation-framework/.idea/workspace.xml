@@ -43,6 +43,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dalma.Saldarriaga\Desktop\web-automation-framework\src\main\resources\excel" />
       <recent name="C:\Users\Dalma.Saldarriaga\Documents\Editor GIT\web-automation-framework\src\main\resources\excel" />
       <recent name="D:\RepositorioLocal\FrameworkBaseWEB\web-automation-framework\src\main\resources\template" />
       <recent name="C:\Users\admin\Desktop\web-automation-framework\src\main\resources\excel" />
@@ -60,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber java.Feature: FlujosMCSS">
+  <component name="RunManager" selected="TestNG.RunTest">
     <configuration name="Feature: FlujosMCSS" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/features/FlujosMCSS.feature" />
@@ -79,14 +80,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: MyFlight" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: Flujos_WEBDELIVERY" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/features/MyFlight.feature" />
-      <option name="GLUE" value="com.tsoft.bot.frontend.helpers com.tsoft.bot.frontend.steps.myflight" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/features/Flujos_WEBDELIVERY.feature" />
+      <option name="GLUE" value="com.tsoft.bot.frontend.helpers com.tsoft.bot.frontend.steps.WEB_DELIVERY" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="web-automation-framework" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
-      <option name="SUGGESTED_NAME" value="Feature: MyFlight" />
+      <option name="SUGGESTED_NAME" value="Feature: Flujos_WEBDELIVERY" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -152,9 +153,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RunTest" />
+        <item itemvalue="Cucumber java.Feature: Flujos_WEBDELIVERY" />
         <item itemvalue="Cucumber java.Feature: FlujosMCSS" />
         <item itemvalue="Cucumber java.Feature: MyFlight_Login" />
-        <item itemvalue="TestNG.RunTest" />
       </list>
     </recent_temporary>
   </component>
