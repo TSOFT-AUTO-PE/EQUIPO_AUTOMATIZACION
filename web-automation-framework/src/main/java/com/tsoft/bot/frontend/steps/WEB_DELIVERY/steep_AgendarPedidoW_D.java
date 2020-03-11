@@ -44,4 +44,64 @@ public class steep_AgendarPedidoW_D {
             generateWord.addImageToWord(driver);
         }
     }
+
+    @When("^Seleccionar fecha del pedido \"([^\"]*)\"$")
+    public void seleccionarFechaDelPedido(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+        try {
+            Thread.sleep(2000);
+            driver.findElement(LNK_FECHA_PEDIDO).click();
+            ExtentReportUtil.INSTANCE.stepPass(driver, "Seleccionamos fecha de pedido");
+            generateWord.sendText("Seleccionamos fecha de pedido");
+            generateWord.addImageToWord(driver);
+        }catch (Exception e){
+            ExtentReportUtil.INSTANCE.stepFail(driver, "Fallo el caso de prueba : " + e.getMessage());
+            generateWord.sendText("Tiempo de espera ha excedido");
+            generateWord.addImageToWord(driver);
+        }
+
+    }
+
+    @And("^se da click en el boton aceptar \"([^\"]*)\"$")
+    public void seDaClickEnElBotonAceptar(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+        try {
+            driver.findElement(BTN_BUSCAR).click();
+            ExtentReportUtil.INSTANCE.stepPass(driver, "Aceptar fecha");
+            generateWord.sendText("Aceptar fecha");
+            generateWord.addImageToWord(driver);
+
+        }catch (Exception e){
+            ExtentReportUtil.INSTANCE.stepFail(driver, "Fallo el caso de prueba : " + e.getMessage());
+            generateWord.sendText("Tiempo de espera ha excedido");
+            generateWord.addImageToWord(driver);
+        }
+    }
+
+
+    @Then("^se verifica que el estado del pedido sea agendado \"([^\"]*)\"$")
+    public void seVerificaQueElEstadoDelPedidoSeaAgendado(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+        try {
+            Thread.sleep(3000);
+            String estado = driver.findElement(TXT_AGENDADO).getAttribute("value");
+            if (estado.equals("AGENDADO")){
+                ExtentReportUtil.INSTANCE.stepPass(driver, "Pedido agendado");
+                generateWord.sendText("Pedido agendado");
+                generateWord.addImageToWord(driver);
+            }else {
+                ExtentReportUtil.INSTANCE.stepFail(driver, "Pedido no agendado");
+                generateWord.sendText("Pedido no agendado");
+                generateWord.addImageToWord(driver);
+            }
+
+        }catch (Exception e){
+            ExtentReportUtil.INSTANCE.stepFail(driver, "Fallo el caso de prueba : " + e.getMessage());
+            generateWord.sendText("Tiempo de espera ha excedido");
+            generateWord.addImageToWord(driver);
+        }
+    }
 }
