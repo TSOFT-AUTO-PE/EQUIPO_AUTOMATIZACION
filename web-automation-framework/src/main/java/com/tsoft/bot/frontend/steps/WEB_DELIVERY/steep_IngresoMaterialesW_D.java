@@ -83,10 +83,11 @@ public class steep_IngresoMaterialesW_D {
     public void clickEnElBotonValidarSerie() throws Exception {
         try {
             driver.findElement(BTN_VALIDAR_SERIE).click();
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             ExtentReportUtil.INSTANCE.stepPass(driver, "Validacion de series");
             generateWord.sendText("Validacion de series");
             generateWord.addImageToWord(driver);
+
 
         }catch (Exception e){
             ExcelReader.writeCellValue(EXCEL_WEB, ORDEN, 1, 19, "FAIL");
@@ -101,7 +102,7 @@ public class steep_IngresoMaterialesW_D {
         try {
             Thread.sleep(3000);
             driver.findElement(BTN_ACEPTAR_VALIDAR_SERIE).click();
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             ExtentReportUtil.INSTANCE.stepPass(driver, "Aceptamos el mensaje de validacion");
             generateWord.sendText("Aceptamos el mensaje de validacion");
             generateWord.addImageToWord(driver);
@@ -117,9 +118,9 @@ public class steep_IngresoMaterialesW_D {
     @And("^Click en aceptar mensaje de refrescar sistema$")
     public void clickEnAceptarMensajeDeRefrescarSistema() throws Exception {
         try {
-            Thread.sleep(5000);
-            driver.findElement(BTN_ACEPTAR_REFRESCAR).click();
             Thread.sleep(2000);
+            driver.findElement(BTN_ACEPTAR_REFRESCAR).click();
+            Thread.sleep(5000);
             ExtentReportUtil.INSTANCE.stepPass(driver, "Aceptamos mensaje para refrescar la pagina");
             generateWord.sendText("Aceptamos mensaje para refrescar la pagina");
             generateWord.addImageToWord(driver);

@@ -8,9 +8,9 @@ formatter.feature({
 });
 formatter.scenarioOutline({
   "line": 137,
-  "name": "IMPRESION DE DOCUMENTOS WEB DELIVERY",
+  "name": "IMPRESION DE DOCUMENTOS -  WEB DELIVERY",
   "description": "",
-  "id": "flujoweb-delivery;impresion-de-documentos-web-delivery",
+  "id": "flujoweb-delivery;impresion-de-documentos----web-delivery",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
@@ -197,60 +197,85 @@ formatter.step({
 });
 formatter.step({
   "line": 174,
-  "name": "ingresar y buscar el numero de orden \"\u003ccaso_prueba\u003e\"",
+  "name": "ingresar y buscar el numero de orden. \"\u003ccaso_prueba\u003e\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 175,
-  "name": "Se encontrara con exito la orden",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 176,
   "name": "click en ejecutar informes",
   "keyword": "When "
 });
 formatter.step({
-  "line": 177,
+  "line": 176,
   "name": "Imprimir guia de remision",
   "keyword": "And "
 });
+formatter.step({
+  "line": 177,
+  "name": "Reporte de preparacion por almacen",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 178,
+  "name": "Reporte de preparacion por envio",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 179,
+  "name": "Imprimir etiqueta",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 180,
+  "name": "cerramos la ejecucion de informes",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 181,
+  "name": "ingresar y buscar el numero de orden. \"\u003ccaso_prueba\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 182,
+  "name": "verificar estado de los informes REALIZADO",
+  "keyword": "Then "
+});
 formatter.examples({
-  "line": 183,
+  "line": 184,
   "name": "",
   "description": "",
-  "id": "flujoweb-delivery;impresion-de-documentos-web-delivery;",
+  "id": "flujoweb-delivery;impresion-de-documentos----web-delivery;",
   "rows": [
     {
       "cells": [
         "caso_prueba"
       ],
-      "line": 184,
-      "id": "flujoweb-delivery;impresion-de-documentos-web-delivery;;1"
+      "line": 185,
+      "id": "flujoweb-delivery;impresion-de-documentos----web-delivery;;1"
     },
     {
       "cells": [
         "1"
       ],
-      "line": 185,
-      "id": "flujoweb-delivery;impresion-de-documentos-web-delivery;;2"
+      "line": 186,
+      "id": "flujoweb-delivery;impresion-de-documentos----web-delivery;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 395880400,
+  "duration": 329774300,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12013485300,
+  "duration": 11948539300,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 185,
-  "name": "IMPRESION DE DOCUMENTOS WEB DELIVERY",
+  "line": 186,
+  "name": "IMPRESION DE DOCUMENTOS -  WEB DELIVERY",
   "description": "",
-  "id": "flujoweb-delivery;impresion-de-documentos-web-delivery;;2",
+  "id": "flujoweb-delivery;impresion-de-documentos----web-delivery;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
@@ -506,7 +531,7 @@ formatter.step({
 });
 formatter.step({
   "line": 174,
-  "name": "ingresar y buscar el numero de orden \"1\"",
+  "name": "ingresar y buscar el numero de orden. \"1\"",
   "matchedColumns": [
     0
   ],
@@ -514,18 +539,46 @@ formatter.step({
 });
 formatter.step({
   "line": 175,
-  "name": "Se encontrara con exito la orden",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 176,
   "name": "click en ejecutar informes",
   "keyword": "When "
 });
 formatter.step({
-  "line": 177,
+  "line": 176,
   "name": "Imprimir guia de remision",
   "keyword": "And "
+});
+formatter.step({
+  "line": 177,
+  "name": "Reporte de preparacion por almacen",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 178,
+  "name": "Reporte de preparacion por envio",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 179,
+  "name": "Imprimir etiqueta",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 180,
+  "name": "cerramos la ejecucion de informes",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 181,
+  "name": "ingresar y buscar el numero de orden. \"1\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 182,
+  "name": "verificar estado de los informes REALIZADO",
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -537,7 +590,7 @@ formatter.match({
   "location": "steep_LoginW_D.ingresoALaUrlDeWEBDELIVERY(String)"
 });
 formatter.result({
-  "duration": 2481591000,
+  "duration": 2554753100,
   "status": "passed"
 });
 formatter.match({
@@ -550,7 +603,7 @@ formatter.match({
   "location": "steep_LoginW_D.ingresoElUsuarioDeWEBDELIVERY(String)"
 });
 formatter.result({
-  "duration": 931748800,
+  "duration": 1173644100,
   "status": "passed"
 });
 formatter.match({
@@ -563,14 +616,14 @@ formatter.match({
   "location": "steep_LoginW_D.laContraseñaDeWEBDELIVERY(String)"
 });
 formatter.result({
-  "duration": 955995100,
+  "duration": 1102518000,
   "status": "passed"
 });
 formatter.match({
   "location": "steep_LoginW_D.seDaClicEnElBotonLoginDeWEBDELIVERYIngresandoCorrectamente()"
 });
 formatter.result({
-  "duration": 2934951700,
+  "duration": 2698241300,
   "status": "passed"
 });
 formatter.match({
@@ -583,21 +636,21 @@ formatter.match({
   "location": "steep_BuscarOrdenW_D.seDaClickEnElBotonIRAEnWEBDELIVERY(String)"
 });
 formatter.result({
-  "duration": 532917200,
+  "duration": 707376400,
   "status": "passed"
 });
 formatter.match({
   "location": "steep_AjusteInventarioW_D.seleccionarAjusteDeInventario()"
 });
 formatter.result({
-  "duration": 3854852800,
+  "duration": 4803213100,
   "status": "passed"
 });
 formatter.match({
   "location": "steep_AjusteInventarioW_D.clickEnElBotonNuevoRegistro()"
 });
 formatter.result({
-  "duration": 2717420800,
+  "duration": 2813041100,
   "status": "passed"
 });
 formatter.match({
@@ -610,7 +663,7 @@ formatter.match({
   "location": "steep_AjusteInventarioW_D.seleccionamosElTipo(String)"
 });
 formatter.result({
-  "duration": 4215751600,
+  "duration": 4606563100,
   "status": "passed"
 });
 formatter.match({
@@ -623,7 +676,7 @@ formatter.match({
   "location": "steep_AjusteInventarioW_D.ingresamosUnComentario(String)"
 });
 formatter.result({
-  "duration": 1051383300,
+  "duration": 1209238800,
   "status": "passed"
 });
 formatter.match({
@@ -636,7 +689,7 @@ formatter.match({
   "location": "steep_AjusteInventarioW_D.ingresamosGuiaDeRemision(String)"
 });
 formatter.result({
-  "duration": 965819400,
+  "duration": 1185557100,
   "status": "passed"
 });
 formatter.match({
@@ -649,21 +702,21 @@ formatter.match({
   "location": "steep_AjusteInventarioW_D.ingresamosElArchivo(String)"
 });
 formatter.result({
-  "duration": 14101012200,
+  "duration": 15188723700,
   "status": "passed"
 });
 formatter.match({
   "location": "steep_AjusteInventarioW_D.clickEnEjecutarAjusteYAceptarMensaje()"
 });
 formatter.result({
-  "duration": 17096635900,
+  "duration": 17339486500,
   "status": "passed"
 });
 formatter.match({
   "location": "steep_AjusteInventarioW_D.validarQueLosArchivosHayanCargado()"
 });
 formatter.result({
-  "duration": 700217900,
+  "duration": 785240900,
   "status": "passed"
 });
 formatter.match({
@@ -676,7 +729,7 @@ formatter.match({
   "location": "steep_BuscarOrdenW_D.seDaClickEnElBotonIRAEnWEBDELIVERY(String)"
 });
 formatter.result({
-  "duration": 516754800,
+  "duration": 550440300,
   "status": "passed"
 });
 formatter.match({
@@ -689,7 +742,7 @@ formatter.match({
   "location": "steep_BuscarOrdenW_D.seleccionarAuditoriaDePedidosEnWEBDELIVERY(String)"
 });
 formatter.result({
-  "duration": 1702627700,
+  "duration": 1646837300,
   "status": "passed"
 });
 formatter.match({
@@ -702,7 +755,7 @@ formatter.match({
   "location": "steep_BuscarOrdenW_D.ingresarElNumeroDeOrdenEnWEBDELIVERY(String)"
 });
 formatter.result({
-  "duration": 1460792300,
+  "duration": 1601554400,
   "status": "passed"
 });
 formatter.match({
@@ -715,7 +768,7 @@ formatter.match({
   "location": "steep_BuscarOrdenW_D.seEncontraraLaOrden(String)"
 });
 formatter.result({
-  "duration": 8704863000,
+  "duration": 8795375300,
   "status": "passed"
 });
 formatter.match({
@@ -728,7 +781,7 @@ formatter.match({
   "location": "steep_AgendarPedidoW_D.seDaClickEnElBotonAgendarPedido(String)"
 });
 formatter.result({
-  "duration": 2809972500,
+  "duration": 3046841700,
   "status": "passed"
 });
 formatter.match({
@@ -739,4 +792,254 @@ formatter.match({
     }
   ],
   "location": "steep_AgendarPedidoW_D.seleccionarFechaDelPedido(String)"
+});
+formatter.result({
+  "duration": 5461781500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 33
+    }
+  ],
+  "location": "steep_AgendarPedidoW_D.seDaClickEnElBotonAceptar(String)"
+});
+formatter.result({
+  "duration": 1502524100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 51
+    }
+  ],
+  "location": "steep_AgendarPedidoW_D.seVerificaQueElEstadoDelPedidoSeaAgendado(String)"
+});
+formatter.result({
+  "duration": 3743237200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 46
+    }
+  ],
+  "location": "steep_BuscarOrdenW_D.seDaClickEnElBotonIRAEnWEBDELIVERY(String)"
+});
+formatter.result({
+  "duration": 700759700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_AsignarSeriesW_D.seleccionarAsignacionDeSeriesEnWEBDELIVERY()"
+});
+formatter.result({
+  "duration": 4455124800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 38
+    }
+  ],
+  "location": "steep_AsignarSeriesW_D.ingresarYBuscarElNumeroDeOrden(String)"
+});
+formatter.result({
+  "duration": 1483716800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_AsignarSeriesW_D.seEncontraraConExitoLaOrden()"
+});
+formatter.result({
+  "duration": 2658022800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 28
+    }
+  ],
+  "location": "steep_IngresoMaterialesW_D.ingresarElNumeroDeIMEI(String)"
+});
+formatter.result({
+  "duration": 1498418100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 31
+    }
+  ],
+  "location": "steep_IngresoMaterialesW_D.ingresarElNumeroDeSIMCARD(String)"
+});
+formatter.result({
+  "duration": 1387246000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_IngresoMaterialesW_D.clickEnElBotonValidarSerie()"
+});
+formatter.result({
+  "duration": 6063846700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_IngresoMaterialesW_D.clickEnAceptarMensajeDeValidacion()"
+});
+formatter.result({
+  "duration": 8849409500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_IngresoMaterialesW_D.clickEnAceptarMensajeDeRefrescarSistema()"
+});
+formatter.result({
+  "duration": 9492974500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 38
+    }
+  ],
+  "location": "steep_AsignarSeriesW_D.ingresarYBuscarElNumeroDeOrden(String)"
+});
+formatter.result({
+  "duration": 1106468800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_AsignarSeriesW_D.seEncontraraConExitoLaOrden()"
+});
+formatter.result({
+  "duration": 2756196000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 49
+    }
+  ],
+  "location": "steep_IngresoMaterialesW_D.verificarQueLaOrdenQuedeEnEstadoVALIDADO(String)"
+});
+formatter.result({
+  "duration": 4856678400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 46
+    }
+  ],
+  "location": "steep_BuscarOrdenW_D.seDaClickEnElBotonIRAEnWEBDELIVERY(String)"
+});
+formatter.result({
+  "duration": 626984000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_ImpresionDocumentosW_D.seleccionarImpresionDeDocumentosEnWEBDELIVERY()"
+});
+formatter.result({
+  "duration": 3378533300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 39
+    }
+  ],
+  "location": "steep_ImpresionDocumentosW_D.ingresarYBuscarElNumeroDeOrden(String)"
+});
+formatter.result({
+  "duration": 5077393500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_ImpresionDocumentosW_D.clickEnEjecutarInformes()"
+});
+formatter.result({
+  "duration": 2938893700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_ImpresionDocumentosW_D.imprimirGuiaDeRemision()"
+});
+formatter.result({
+  "duration": 26615778600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_ImpresionDocumentosW_D.reporteDePreparacionPorAlmacen()"
+});
+formatter.result({
+  "duration": 30786479000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_ImpresionDocumentosW_D.reporteDePreparacionPorEnvio()"
+});
+formatter.result({
+  "duration": 26387467900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_ImpresionDocumentosW_D.imprimirEtiqueta()"
+});
+formatter.result({
+  "duration": 23742561500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_ImpresionDocumentosW_D.cerramosLaEjecucionDeInformes()"
+});
+formatter.result({
+  "duration": 2150925200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 39
+    }
+  ],
+  "location": "steep_ImpresionDocumentosW_D.ingresarYBuscarElNumeroDeOrden(String)"
+});
+formatter.result({
+  "duration": 5056872700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "steep_ImpresionDocumentosW_D.verificarEstadoDeLosInformesREALIZADO()"
+});
+formatter.result({
+  "duration": 2922106700,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2674505600,
+  "status": "passed"
+});
 });

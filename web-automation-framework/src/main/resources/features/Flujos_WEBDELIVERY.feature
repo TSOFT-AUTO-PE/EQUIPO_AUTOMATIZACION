@@ -134,7 +134,7 @@ Feature: FlujoWEB_DELIVERY
 
 
   @Test7
-  Scenario Outline: IMPRESION DE DOCUMENTOS WEB DELIVERY
+  Scenario Outline: IMPRESION DE DOCUMENTOS -  WEB DELIVERY
 
     Given Ingreso a la url de WEB DELIVERY "<caso_prueba>"
     When Ingreso el usuario de WEB DELIVERY"<caso_prueba>"
@@ -171,15 +171,81 @@ Feature: FlujoWEB_DELIVERY
     And verificar que la orden quede en estado VALIDADO "<caso_prueba>"
     Given Se da click en el boton IR A en WEB DELIVERY "<caso_prueba>"
     When Seleccionar impresion de documentos en WEB DELIVERY
-    And ingresar y buscar el numero de orden "<caso_prueba>"
-    Then Se encontrara con exito la orden
+    And ingresar y buscar el numero de orden. "<caso_prueba>"
     When click en ejecutar informes
     And Imprimir guia de remision
+    And Reporte de preparacion por almacen
+    And Reporte de preparacion por envio
+    And Imprimir etiqueta
+    Then cerramos la ejecucion de informes
+    And ingresar y buscar el numero de orden. "<caso_prueba>"
+    Then verificar estado de los informes REALIZADO
+
+    Examples:
+      | caso_prueba |
+      |           1 |
+
+  @Test8
+  Scenario Outline: IMPRESION DE DOCUMENTOS - Imprimir guia de remision
+
+    Given Ingreso a la url de WEB DELIVERY "<caso_prueba>"
+    When Ingreso el usuario de WEB DELIVERY"<caso_prueba>"
+    And La contraseña de WEB DELIVERY"<caso_prueba>"
+    Then se da clic en el boton login de WEB DELIVERY ingresando correctamente
+    Given Se da click en el boton IR A en WEB DELIVERY "<caso_prueba>"
+    When Seleccionar impresion de documentos en WEB DELIVERY
+    And ingresar y buscar el numero de orden. "<caso_prueba>"
+    When click en ejecutar informes
+    And Imprimir guia de remision
+    And Reporte de preparacion por almacen
+    Examples:
+      | caso_prueba |
+      |           1 |
+
+  @Test9
+  Scenario Outline: IMPRESION DE DOCUMENTOS - Imprimir guia de remision
+
+    Given Ingreso a la url de WEB DELIVERY "<caso_prueba>"
+    When Ingreso el usuario de WEB DELIVERY"<caso_prueba>"
+    And La contraseña de WEB DELIVERY"<caso_prueba>"
+    Then se da clic en el boton login de WEB DELIVERY ingresando correctamente
+    Given Se da click en el boton IR A en WEB DELIVERY "<caso_prueba>"
+    When Seleccionar impresion de documentos en WEB DELIVERY
+    And ingresar y buscar el numero de orden. "<caso_prueba>"
+    When click en ejecutar informes
+    And Reporte de preparacion por almacen
+    Examples:
+      | caso_prueba |
+      |           1 |
 
 
+  @Test10
+  Scenario Outline: IMPRESION DE DOCUMENTOS - Reporte de preparacion por envio
 
+    Given Ingreso a la url de WEB DELIVERY "<caso_prueba>"
+    When Ingreso el usuario de WEB DELIVERY"<caso_prueba>"
+    And La contraseña de WEB DELIVERY"<caso_prueba>"
+    Then se da clic en el boton login de WEB DELIVERY ingresando correctamente
+    Given Se da click en el boton IR A en WEB DELIVERY "<caso_prueba>"
+    When Seleccionar impresion de documentos en WEB DELIVERY
+    And ingresar y buscar el numero de orden. "<caso_prueba>"
+    When click en ejecutar informes
+    And Reporte de preparacion por envio
+    Examples:
+      | caso_prueba |
+      |           1 |
+  @Test11
+  Scenario Outline: IMPRESION DE DOCUMENTOS - Reporte de preparacion por pedido
 
-
+    Given Ingreso a la url de WEB DELIVERY "<caso_prueba>"
+    When Ingreso el usuario de WEB DELIVERY"<caso_prueba>"
+    And La contraseña de WEB DELIVERY"<caso_prueba>"
+    Then se da clic en el boton login de WEB DELIVERY ingresando correctamente
+    Given Se da click en el boton IR A en WEB DELIVERY "<caso_prueba>"
+    When Seleccionar impresion de documentos en WEB DELIVERY
+    And ingresar y buscar el numero de orden. "<caso_prueba>"
+    When click en ejecutar informes
+    And Reporte de preparacion por pedido
     Examples:
       | caso_prueba |
       |           1 |
